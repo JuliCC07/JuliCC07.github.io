@@ -1,6 +1,6 @@
 baseURL = "https://JuliCC07.github.io/"
 title = "Julián Collados Corbalán | Portfolio"
-paginate = 5
+pagination.pagerSize = 5
 theme = "PaperMod"
 
 enableInlineShortcodes = true
