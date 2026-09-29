@@ -51,7 +51,7 @@ name = "Projects"
 url = "/projects/"
 
 [[params.profileMode.buttons]]
-name = "Download CV"
+name = "View / Print CV"
 url = "/cv/"
 
 [[params.socialIcons]]
