@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <div class="print-actions hide-on-print" style="text-align: right; margin-bottom: 20px;">
+      <button onclick="window.print()" style="padding: 10px 20px; background: var(--primary); color: var(--theme); border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">🖨️ Print / Save as PDF</button>
+    </div>
+  </header>
+  
+  <div class="post-content cv-content">
+    {{ .Content }}
+  </div>
+</article>
+
+<style>
+/* Custom CV Styling */
+.cv-content h2 { margin-top: 0; margin-bottom: 5px; color: var(--primary); font-size: 1.8em; }
+.cv-content h3 { font-size: 1.2em; border-bottom: 1px solid var(--border); padding-bottom: 5px; margin-top: 25px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); }
+.cv-content p { margin-bottom: 10px; }
+.cv-content ul { margin-bottom: 15px; padding-left: 20px; }
+.cv-content li { margin-bottom: 5px; }
+
+/* Print-specific overrides */
+@media print {
+  @page { margin: 1.5cm; }
+  body { background: white !important; color: black !important; font-size: 11pt; }
+  .hide-on-print, header.header, footer.footer, .theme-toggle { display: none !important; }
+  .main { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+  .cv-content h2, .cv-content h3, .cv-content strong, .cv-content a { color: black !important; text-decoration: none !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.9em; color: #555; }
+  a[href^="mailto:"]::after, a[href^="http"]:not([href*="linkedin.com"]):not([href*="github.com"]):not([href*="JuliCC07"])::after { content: ""; }
+}
+</style>
+{{ end }}

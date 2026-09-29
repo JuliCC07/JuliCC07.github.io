@@ -1,0 +1,90 @@
+baseURL = "https://JuliCC07.github.io/"
+title = "Julián Collados Corbalán | Portfolio"
+paginate = 5
+theme = "PaperMod"
+
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "Julián Collados Corbalán"
+description = "Junior Systems Administrator & Security Enthusiast"
+keywords = [ "SysAdmin", "Security", "Linux", "Networking", "Portfolio" ]
+author = "Julián Collados Corbalán"
+images = []
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+[params.profileMode]
+enabled = true
+title = "Hi, I'm Julián"
+subtitle = "Second-year ASIR student (Network Systems Administration) building practical experience in Linux administration, virtualization, networking, and security. I manage a multi-VM home lab with pfSense, Debian, and Windows Server on KVM, and practice penetration testing through HackTheBox. Looking for an Erasmus+ internship (March–June 2027) where I can contribute to real infrastructure while growing toward an OSCP certification."
+imageUrl = ""
+imageWidth = 120
+imageHeight = 120
+imageTitle = "Julián Collados Corbalán"
+
+[[params.profileMode.buttons]]
+name = "Projects"
+url = "/projects/"
+
+[[params.profileMode.buttons]]
+name = "Download CV"
+url = "/cv/"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/JuliCC07"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/julicc07"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:juliancolladosc@gmail.com"
+
+[[params.socialIcons]]
+name = "hackthebox"
+url = "https://profile.hackthebox.com/profile/019d3f0d-ff4b-731c-a6da-2395802a6ef5"
+
+[menu]
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 10
+
+[[menu.main]]
+identifier = "certifications"
+name = "Certifications"
+url = "/certifications/"
+weight = 20
+
+[[menu.main]]
+identifier = "cv"
+name = "CV"
+url = "/cv/"
+weight = 30
