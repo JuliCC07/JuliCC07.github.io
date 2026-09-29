@@ -9,7 +9,7 @@ layout: "cv"
 📧 juliancolladosc@gmail.com | 🔗 [linkedin.com/in/julicc07](https://linkedin.com/in/julicc07) | 🐙 [github.com/JuliCC07](https://github.com/JuliCC07) | 🌐 [JuliCC07.github.io](https://JuliCC07.github.io)
 
 ### PROFILE
-Second-year ASIR student (Network Systems Administration) building practical experience in Linux administration, virtualization, networking, and security. I manage a multi-VM home lab with pfSense, Debian, and Windows Server on KVM, and practice penetration testing through HackTheBox. Looking for an Erasmus+ internship (March–June 2027) where I can contribute to real infrastructure while growing toward an OSCP certification.
+Second-year ASIR student (Network Systems Administration) with a strong foundation in Linux systems, network infrastructure, and cybersecurity. I specialize in designing virtualized environments, automating system deployments, and conducting vulnerability assessments. Through continuous hands-on projects, I have developed practical skills in routing, server administration, and defensive security. I am currently seeking an Erasmus+ internship (March–June 2027) to apply my technical capabilities in a real-world enterprise environment while working toward the OSCP certification.
 
 ### SKILLS
 * **Systems Administration:** Linux (Debian, Ubuntu, Fedora, CachyOS), Windows Server, Systemd, Bash Scripting, Automation
