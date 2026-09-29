@@ -19,20 +19,25 @@ My testing workflow strictly follows a structured methodology:
 
 ## Featured Compromises (Retired Machines)
 
-### 1. Cacti (MonitorsFour)
+### 1. Nexus
+* **Initial Access:** Conducted thorough enumeration to uncover hidden services and application logic vulnerabilities.
+* **Exploitation:** Successfully bypassed input validation filters to gain an initial foothold on the server.
+* **Privilege Escalation:** Exploited misconfigured internal services and improper permissions to escalate from a low-privileged user to root.
+
+### 2. 2million
+* **Initial Access:** Analyzed obfuscated JavaScript on the target web application, deobfuscating the code to uncover hidden API endpoints (`/api/v1/invite/verify` and `makeInviteCode()`).
+* **Exploitation:** Abused the exposed API to generate valid invite codes, successfully bypassing authentication.
+* **Privilege Escalation:** Leveraged a vulnerability in the administrator dashboard to inject commands and gain an interactive shell, eventually escalating to root.
+
+### 3. Cacti (MonitorsFour)
 * **Initial Access:** Discovered an Insecure Direct Object Reference (IDOR) on a hidden API endpoint, extracting MD5 password hashes. Cracked the hashes to access a Cacti monitoring dashboard.
 * **Exploitation:** Exploited **CVE-2025-24367** (Cacti RCE via Graph Templates) to gain a shell as `www-data`. Discovered I was inside a Docker container.
 * **Privilege Escalation:** Escaped the container by exploiting **CVE-2025-9074**, leveraging an unauthenticated Docker Engine API exposed on Docker Desktop's internal subnet to mount the host filesystem.
 
-### 2. CCTV
+### 4. CCTV
 * **Initial Access:** Identified an outdated ZoneMinder instance and exploited an unauthenticated SQL Injection (CVE-2024-51482) using a captured Burp request in `sqlmap`.
 * **Exploitation:** Dumped the `Users` table, cracked a user's password with `hashcat`, and gained SSH access.
 * **Privilege Escalation:** Found a locally bound MotionEye instance running as root. Set up an SSH local port forward and exploited an authenticated RCE in MotionEye to gain a root shell.
-
-### 3. Archetype (Starting Point)
-* **Initial Access:** Connected to an SMB share using an anonymous null session, discovering cleartext database credentials in a configuration file.
-* **Exploitation:** Authenticated to Microsoft SQL Server using Impacket's `mssqlclient.py` and enabled `xp_cmdshell` to execute a PowerShell reverse shell.
-* **Privilege Escalation:** Stole the Administrator's credentials from the `ConsoleHost_history.txt` PowerShell history file.
 
 ## Outcome
 Through these exercises, I have developed a deep understanding of how system misconfigurations (like excessive Linux capabilities or exposed Docker sockets) are abused in the real world, heavily informing my approach to secure systems administration.
