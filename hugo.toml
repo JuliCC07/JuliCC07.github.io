@@ -20,8 +20,9 @@ description = "Junior Systems Administrator & Security Enthusiast"
 keywords = [ "SysAdmin", "Security", "Linux", "Networking", "Portfolio" ]
 author = "Julián Collados Corbalán"
 images = []
-defaultTheme = "auto"
+defaultTheme = "dark"
 disableThemeToggle = false
+
 ShowReadingTime = true
 ShowShareButtons = false
 ShowPostNavLinks = true
@@ -36,6 +37,10 @@ hidemeta = false
 hideSummary = false
 showtoc = false
 tocopen = false
+
+[params.assets]
+theme_color = "#131316"
+msapplication_TileColor = "#131316"
 
 [params.profileMode]
 enabled = true
@@ -88,3 +93,6 @@ identifier = "cv"
 name = "CV"
 url = "/cv/"
 weight = 30
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
